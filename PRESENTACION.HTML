@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>María Camila Montoya Uribe | Psicóloga y Neuropsicopedagoga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!--
+    Narrative & Visualization Plan:
+    Selected Palette: "Calm Greens & Beige" (#E8F5E9, #A5D6A7, #43A047, #F5F5F5, #333333)
+    Narrative Structure:
+    1. Hero: Introduction to María Camila Montoya Uribe.
+    2. About Me: Professional bio and philosophy.
+    3. Focus Areas (Text/List): Present primary areas of expertise informatively.
+    4. Services Offered (Cards): Detail offerings in a structured layout.
+    5. Therapeutic Process (HTML/CSS Flowchart): Explain the step-by-step methodology.
+    6. Rates & Modalities (Text/List): Present pricing clearly without a chart.
+    7. Session Policies: Detail cancellation, no-show, and waiting period.
+    8. Contact & CTA: Provide clear action steps and contact information.
+
+    Visualization Choices:
+    - Data: Focus Areas -> Goal: Inform -> Visualization: Text/List (HTML/CSS) -> Justification: User requested removal of chart for this specific data, preferring informative text. Method confirms NO SVG.
+    - Data: Pricing -> Goal: Inform -> Visualization: Text/List (HTML/CSS) -> Justification: User requested removal of chart for this specific data. Method confirms NO SVG.
+    - Data: Process Flow -> Goal: Organize -> Visualization: HTML/CSS Flowchart -> Justification: Clearly shows a sequence of events without using prohibited libraries like Mermaid JS. Method confirms NO SVG.
+    - Data: Services List -> Goal: Organize -> Visualization: HTML/CSS Cards -> Justification: More visually appealing and structured than a plain text list. Method confirms NO SVG.
+
+    Constraint Confirmation:
+    - NO MERMAID JS was used.
+    - NO SVG was used.
+    -->
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .flowchart-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-width: 2px;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            min-height: 100px;
+        }
+        .flowchart-arrow {
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #A5D6A7;
+            transform: rotate(90deg);
+        }
+         @media (min-width: 768px) {
+            .flowchart-arrow {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F5F5F5] text-gray-800">
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center p-8 md:p-12 bg-white rounded-2xl shadow-lg mb-12" style="background-image: url('https://www.transparenttextures.com/patterns/subtle-leaves.png'); background-color: #E8F5E9;">
+            <h1 class="text-4xl md:text-6xl font-bold text-[#43A047]">María Camila Montoya Uribe</h1>
+            <p class="text-xl md:text-2xl mt-2 text-gray-700">Psicóloga y Neuropsicopedagoga</p>
+            <p class="mt-6 text-lg italic text-gray-600">"Acompañando procesos con raíz, calma y evidencia."</p>
+            <div class="mt-4 text-sm text-gray-500">
+                <span>TP: 350699</span> | <span>CC: 1001004762</span>
+            </div>
+        </header>
+
+        <section id="about" class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#43A047] mb-6">Sobre Mí</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-2 text-lg text-gray-700 leading-relaxed">
+                    <p>Soy psicóloga, neuropsicopedagoga, y especialista en el acompañamiento clínico y psicoeducativo para niños, adolescentes y adultos.</p>
+                    <p class="mt-4">Mi trabajo se fundamenta en un enfoque cognitivo-conductual y sistémico, con un énfasis especial en la terapia de esquemas para abordar patrones profundos y promover cambios significativos y duraderos.</p>
+                </div>
+                <div class="flex justify-center space-x-8 text-5xl text-[#43A047]">
+                    <span title="Neurodesarrollo">🧠</span>
+                    <span title="Bienestar">🌿</span>
+                    <span title="Evaluación">📝</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="focus" class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#43A047] mb-2">Áreas de Enfoque Principales</h2>
+             <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Mi práctica se centra en diversas áreas clave, ofreciendo un acompañamiento especializado para cada necesidad:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-700">
+                <div class="p-4 bg-[#E8F5E9] rounded-lg shadow-sm">
+                    <h3 class="font-bold text-[#43A047] mb-2">Trastornos del Neurodesarrollo</h3>
+                    <p>Acompañamiento especializado en condiciones como TDAH, Trastornos del Espectro Autista y Discapacidades Intelectuales, promoviendo el desarrollo de habilidades y la adaptación.</p>
+                </div>
+                <div class="p-4 bg-[#E8F5E9] rounded-lg shadow-sm">
+                    <h3 class="font-bold text-[#43A047] mb-2">Ansiedad y Depresión</h3>
+                    <p>Estrategias y herramientas basadas en evidencia para la gestión de la ansiedad, el manejo del estrés y el apoyo en procesos depresivos, buscando el equilibrio emocional.</p>
+                </div>
+                <div class="p-4 bg-[#E8F5E9] rounded-lg shadow-sm">
+                    <h3 class="font-bold text-[#43A047] mb-2">Procesos de Aprendizaje</h3>
+                    <p>Intervenciones para dificultades de aprendizaje, mejora de técnicas de estudio y desarrollo de habilidades cognitivas para optimizar el rendimiento académico y personal.</p>
+                </div>
+                <div class="p-4 bg-[#E8F5E9] rounded-lg shadow-sm">
+                    <h3 class="font-bold text-[#43A047] mb-2">Otros Acompañamientos</h3>
+                    <p>Soporte en diversas situaciones como duelo, manejo de emociones, desarrollo de habilidades sociales y fortalecimiento de la autoestima, adaptándome a las necesidades individuales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#43A047] mb-8">¿Qué Ofrezco?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-5xl mb-4">👧🏽</p>
+                    <h3 class="font-bold text-xl text-[#43A047]">Niños</h3>
+                    <p class="text-gray-600 mt-2">Intervenciones neuropsicopedagógicas personalizadas y apoyo en procesos de aprendizaje.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-5xl mb-4">🧑🏼</p>
+                    <h3 class="font-bold text-xl text-[#43A047]">Adolescentes</h3>
+                    <p class="text-gray-600 mt-2">Asesoramiento para la gestión de la ansiedad, depresión y desafíos sociales.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-5xl mb-4">👩‍🦱</p>
+                    <h3 class="font-bold text-xl text-[#43A047]">Adultos</h3>
+                    <p class="text-gray-600 mt-2">Terapia de esquemas y acompañamiento psicológico clínico para el autoconocimiento.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-5xl mb-4">🌈</p>
+                    <h3 class="font-bold text-xl text-[#43A047]">Planes Integrales</h3>
+                    <p class="text-gray-600 mt-2">Enfoque terapéutico y educativo combinado para un bienestar completo y sostenido.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#43A047] mb-2">Mi Enfoque Terapéutico</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Mi proceso está diseñado para ser integral y adaptativo, asegurando que cada persona reciba el cuidado que necesita en su etapa de vida. Seguimos un camino claro desde la evaluación hasta la creación de un plan personalizado.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+                <div class="flowchart-step border-[#A5D6A7] bg-white w-full md:w-1/5">1. Evaluación Integral y Diagnóstico</div>
+                <div class="flowchart-arrow">»</div>
+                <div class="flowchart-step border-[#A5D6A7] bg-white w-full md:w-1/4">2. Terapia Cognitivo-Conductual y Sistémica</div>
+                <div class="flowchart-arrow">»</div>
+                <div class="flowchart-step border-[#A5D6A7] bg-white w-full md:w-1/4">3. Terapia de Esquemas para Reorganizar Patrones</div>
+                <div class="flowchart-arrow">»</div>
+                <div class="flowchart-step border-[#A5D6A7] bg-white w-full md:w-1/5">4. Plan de Intervención Adaptado</div>
+            </div>
+        </section>
+
+        <section id="rates-and-location" class="mb-12">
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                    <h2 class="text-3xl font-bold text-center text-[#43A047] mb-6">Tarifas y Modalidades</h2>
+                    <div class="text-center text-lg text-gray-700">
+                        <p class="mb-4"><span class="font-bold text-[#43A047]">Presencial:</span> $150.000 COP</p>
+                        <p class="mb-4"><span class="font-bold text-[#43A047]">Virtual:</span> $120.000 COP</p>
+                        <p class="mb-4"><span class="font-bold text-[#43A047]">Duración:</span> 50-60 minutos</p>
+                        <p class="text-gray-600 mb-6">Incluye seguimiento individualizado y material de apoyo.</p>
+                        <hr class="border-gray-200 my-6">
+                        <p class="text-gray-700 mb-4"><span class="font-bold text-[#43A047]">Pago:</span> Se debe realizar antes de cada sesión.</p>
+                        <img src="QR - NEUROPSICOPEDAGOGÍA.jpg" alt="Código QR para pagos de Neuropsicopedagogía" class="mx-auto my-6 rounded-lg shadow-md max-w-[200px] h-auto">
+                        <p class="text-gray-700">Es indispensable haber llenado el <a href="https://forms.gle/C7GHDT6jDWRnvwEd6" target="_blank" class="font-bold text-[#43A047] hover:underline">formulario de registro</a> y el <span class="font-bold text-[#43A047]">consentimiento informado</span> previamente.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10">
+                     <h2 class="text-3xl font-bold text-center text-[#43A047] mb-6">Lugar de Atención</h2>
+                     <div class="text-center">
+                         <h3 class="font-bold text-xl text-gray-700">Presencial</h3>
+                         <p class="text-lg text-gray-600">📍 Diálogo Existencial Envigado Antioquia</p>
+                         <p class="text-sm text-gray-500 mb-6">(Un ambiente cálido y confidencial)</p>
+
+                         <h3 class="font-bold text-xl text-gray-700">Virtual</h3>
+                         <p class="text-lg text-gray-600">🗓️ Google Meet con reuniones agendadas en Google Calendar</p>
+                         <p class="text-sm text-gray-500 mb-6">(Comodidad y accesibilidad desde cualquier lugar)</p>
+
+                         <div class="mt-8 bg-[#E8F5E9] p-4 rounded-lg">
+                            <p class="text-gray-700 font-semibold">Ambas modalidades están diseñadas para ofrecer un espacio acogedor y de total confianza.</p>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="policies" class="bg-white rounded-2xl shadow-lg p-6 md:p-10 mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#43A047] mb-6">Políticas de Sesiones</h2>
+            <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                <p><span class="font-bold text-[#43A047]">Política de Cancelación:</span> Las citas deben ser canceladas o reprogramadas con al menos 24 horas de antelación. Esto permite ofrecer el espacio a otros pacientes que lo necesiten.</p>
+                <p><span class="font-bold text-[#43A047]">Cobro por Inasistencia:</span> En caso de no asistir a la sesión sin previo aviso o cancelar con menos de 24 horas, se realizará un cobro del 100% de la tarifa de la sesión.</p>
+                <p><span class="font-bold text-[#43A047]">Espera y Terminación de Sesión:</span> Se esperará un máximo de 15 minutos desde la hora programada de la cita. Pasado este tiempo, la sesión se dará por terminada y se considerará como inasistencia, aplicando el cobro correspondiente.</p>
+            </div>
+        </section>
+
+        <footer id="contact" class="text-center bg-white rounded-2xl shadow-lg p-8 md:p-12 mt-12" style="background-image: url('https://www.transparenttextures.com/patterns/subtle-leaves.png'); background-color: #E8F5EE;">
+            <h2 class="text-3xl font-bold text-[#43A047]">Contacto & Agenda</h2>
+            <p class="text-lg text-gray-600 mt-4 mb-8">¡Conversemos y construyamos juntos un espacio de cuidado! 🌱</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                 <a href="https://wa.me/573154348015" target="_blank" class="bg-[#4CAF50] text-white font-bold py-3 px-6 rounded-full hover:bg-[#43A047] transition-colors duration-300 text-lg">
+                    WhatsApp: 315 434 8015
+                </a>
+                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1iK-ELZcQpy6dV6mXpJnGdqXPzEjNnhi922qvOIrNWeihdzppRHfvKEnPOUau4rElT5YVx504S" target="_blank" class="bg-white border-2 border-[#4CAF50] text-[#43A047] font-bold py-3 px-6 rounded-full hover:bg-[#E8F5E9] transition-colors duration-300 text-lg">
+                    Agendar Cita
+                </a>
+                <a href="https://www.instagram.com/montoyacamila3?igsh=ZzkzdnBzYWQycmt5&utm_source=qr" target="_blank" class="bg-white border-2 border-[#4CAF50] text-[#43A047] font-bold py-3 px-6 rounded-full hover:bg-[#E8F5E9] transition-colors duration-300 text-lg">
+                    Instagram: @montoyacamila3
+                </a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // No longer needed functions for chart, but keeping for consistency if other charts are added later.
+        function wrapText(text, maxLength) {
+            if (typeof text !== 'string' || text.length <= maxLength) {
+                return text;
+            }
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    if (currentLine.length === 0) {
+                        currentLine = word;
+                    } else {
+                        currentLine += ' ' + word;
+                    }
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            } else {
+              return label;
+            }
+        };
+
+        const chartColors = {
+            primary: '#43A047',
+            secondary: '#A5D6A7',
+            tertiary: '#81C784',
+            light: '#C8E6C9',
+            dark: '#388E3C',
+        };
+
+        // Removed Chart.js initialization for focusAreasChart as it's no longer a chart.
+        // Removed Chart.js initialization for ratesChart as it's no longer a chart.
+        
+        // Removed Gemini API Integration - General Q&A
+        // Removed Gemini API Integration - Reflection Question
+    </script>
+</body>
+</html>
